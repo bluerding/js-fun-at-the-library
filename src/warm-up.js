@@ -14,25 +14,27 @@
 // var ...
 var title = 'The Hobbit'
 var pages = 304
-
+console.log(title)
+console.log(pages)
 
 // Reassign (not initialize) your "pages" variable from above. An editor came around and
 // condensed the book, use a built in math operator to make the page count a quarter
 // of what it currently is 
 pages = 304 / 4
-
+console.log(pages)
 
 // Initialize a new variable "movie", but leave it undefined
 var movie = 
-
+console.log(movie)
 
 // Create a variable named "sequel", and assign it to a be a sequel of your
 // book (made up or not!). Your sequel must make use of your "title" variable from above
-var sequel = "title:, This Time It's Personal"
+var sequel = title + ': This Time Its Personal'
 console.log(sequel)
 
 // Initialize a new variable "isFavorite", and assign it to a boolean value indicating
 // if the book you chose is your favorite book or not
+var isFavorite = true
 
 
 
@@ -41,7 +43,13 @@ console.log(sequel)
 // assign a boolean value to this variable. If "pages" is less than 25, the
 // variable should be true, otherwise it should be false. You MUST use a
 // comparison operator.
-
+var isShortStory = ''
+    if (pages < 25) {
+        console.log(true)
+    } else {
+        console.log(false)
+    }
+console.log(isShortStory)
 
 
 //------------------------- Conditionals -------------------------//
@@ -50,7 +58,14 @@ console.log(sequel)
 // Express the following in code: If the variable "pages" is less than 1000 log
 // the statement 'I could read that in a day!', otherwise, log the statement 
 // 'Ok, maybe I could read that in a day and a half'
-
+function dailyRead() {
+    if (pages < 1000) {
+        console.log('I could read that in a day!')
+    } else {
+        console.log('Ok, maybe I could read that in a day and a half')
+    }
+}
+dailyRead()
 
 
 // Express the following in code: If the variable "isFavorite" is true,
@@ -58,18 +73,26 @@ console.log(sequel)
 // statement 'I recently read the [title] book'. In either case, the value stored in
 // the "title" variable should be included in the logged statement.
 
-
+function recentRead(title){
+    if (isFavorite === true){
+        console.log(`My favorite book is ${title}`)
+    } else {
+        console.log(`I recently read the ${title} book`)
+    }
+}
+recentRead('The Hobbit')
+recentRead('Goosebumps')
 
 //------------------------- Arrays -------------------------//
 
 
 // Create a new variable "books" and assign it to an Array of 5 different
 // book titles, represented by their names as Strings.
-
+var books = ['Watch', 'Scale', 'The Stand', 'Harry Potter', 'Lord of the Rings']
 
 // Write the code to access the 3rd element of the Array, using bracket
 // notation.
-
+console.log(books[2])
 
 // Create a new variable "belowTwoHundred" and assign it to an Array of 12
 // different numbers below two hundred.
