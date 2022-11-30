@@ -43,13 +43,11 @@ var isFavorite = true
 // assign a boolean value to this variable. If "pages" is less than 25, the
 // variable should be true, otherwise it should be false. You MUST use a
 // comparison operator.
-var isShortStory = ''
-    if (pages < 25) {
-        console.log(true)
+if (pages < 25) {
+    var isShortStory = true 
     } else {
-        console.log(false)
-    }
-console.log(isShortStory)
+    var isShortStory = false
+}
 
 
 //------------------------- Conditionals -------------------------//
@@ -58,30 +56,25 @@ console.log(isShortStory)
 // Express the following in code: If the variable "pages" is less than 1000 log
 // the statement 'I could read that in a day!', otherwise, log the statement 
 // 'Ok, maybe I could read that in a day and a half'
-function dailyRead() {
-    if (pages < 1000) {
-        console.log('I could read that in a day!')
-    } else {
-        console.log('Ok, maybe I could read that in a day and a half')
-    }
+if (pages < 1000) {
+    console.log('I could read that in a day!')
+} else {
+    console.log('Ok, maybe I could read that in a day and a half')
 }
-dailyRead()
+
+
 
 
 // Express the following in code: If the variable "isFavorite" is true,
 // log the statement 'My favorite book is [title]!'. Otherwise, log the
 // statement 'I recently read the [title] book'. In either case, the value stored in
 // the "title" variable should be included in the logged statement.
-
-function recentRead(title){
-    if (isFavorite === true){
-        console.log(`My favorite book is ${title}`)
-    } else {
-        console.log(`I recently read the ${title} book`)
-    }
+if (isFavorite === true) {
+    console.log(`My favorite book is ${title}`)
+} else {
+    console.log(`I recently read the ${title} book`)
 }
-recentRead('The Hobbit')
-recentRead('Goosebumps')
+
 
 //------------------------- Arrays -------------------------//
 
@@ -96,17 +89,22 @@ console.log(books[2])
 
 // Create a new variable "belowTwoHundred" and assign it to an Array of 12
 // different numbers below two hundred.
-
+var belowTwoHundred = [13, 35, 56, 84, 98, 105, 23, 111, 135, 104, 178, 123]
 
 // Write the code to access the 5th element of the array, using bracket notation.
-
+console.log(belowTwoHundred[6])
 
 //------------------------- Objects -------------------------//
 
 // Create a new variable "dictionary" and assign to it an object literal with two
 // keys: name, and hasThesaurus. The value for name should the string 'Webster's', and
 // the value for hasThesaurus should be false
-
+var dictionary = {
+    name: "Webster's",
+    hasThesaurus: false
+}
 
 // Write the code to add the key of pageCount, with the value of 720. Use dot
 // notation to do this. DO NOT modify your code from above.
+dictionary.pageCount = 720
+console.log(dictionary)
