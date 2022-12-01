@@ -7,8 +7,12 @@ createTitle("Dancing Sushi")
 createTitle("Dragon in the Summer")
 createTitle("Teenage Ghoul")
 
-function buildMainCharacter() {
-
+function buildMainCharacter(name, age, pronouns) {
+  return {
+    name: name,
+    age: age,
+    pronouns: pronouns
+  }
 }
 
 
