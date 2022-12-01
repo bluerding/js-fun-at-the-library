@@ -1,11 +1,6 @@
 function createTitle(title) {
   return ("The " + title)
 }
-createTitle("Storm's Awakening")
-
-createTitle("Dancing Sushi")
-createTitle("Dragon in the Summer")
-createTitle("Teenage Ghoul")
 
 function buildMainCharacter(name, age, pronouns) {
   return {
@@ -15,13 +10,30 @@ function buildMainCharacter(name, age, pronouns) {
   }
 }
 
+function saveReview(newReview, existingReview) {
+  if(existingReview.indexOf(newReview) === -1){
+    existingReview.push(newReview)
+  }
+}
 
+function calculatePageCount(title){
+  return(title.length * 20)
+}
+
+function writeBook(title, mainCharacter, genre) {
+  return book = {
+    title: title,
+    genre: genre,
+    mainCharacter: mainCharacter,
+    pageCount: calculatePageCount(title)
+  }
+}
 
 module.exports = {
   createTitle,
   buildMainCharacter,
-  // saveReview,
-  // calculatePageCount,
-  // writeBook,
+  saveReview,
+  calculatePageCount,
+  writeBook,
   // editBook
 }
