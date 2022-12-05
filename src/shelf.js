@@ -13,7 +13,7 @@ function unshelfBook(book, shelf) {
       return shelf
   }
 }
-// I want to access the value of the key 'title' within each object of the given shelf
+
 function listTitles(shelf){
   var bookTitles = []
   for (i = 0; i < shelf.length; i++) {
@@ -23,12 +23,19 @@ function listTitles(shelf){
   return bookTitles.join(', ')
 }
 
-
+function searchShelf (shelf, book) {
+  for (i = 0; i < shelf.length; i++)
+  if (shelf[i].title = book){
+    return true
+  } else {
+    return false
+  }
+}
 
    
 module.exports = {
   shelfBook,
   unshelfBook,
   listTitles,
-  //searchShelf
+  searchShelf
 };
